@@ -17,6 +17,10 @@ namespace SnakeAndLadderPbr
             int Position = 0;
             Console.WriteLine($"Initial Position Of the Player Is \"{Position}\"");
 
+            Random random = new Random();
+            int Die = random.Next(1, 7);
+            Console.WriteLine($"The number got by dice roll is {Die}");
+
         }
     }
 }
