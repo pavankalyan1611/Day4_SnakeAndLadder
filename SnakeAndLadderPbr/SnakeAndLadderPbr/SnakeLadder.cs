@@ -17,7 +17,7 @@ namespace SnakeAndLadderPbr
         {
             int Position = 0;
             Console.WriteLine($"Initial Position Of the Player Is \"{Position}\"\n");
-            for (; Position <= 100;)
+            for (; Position < 100;)
             {
                 Random random = new Random();
                 int Die = random.Next(1, 7);
@@ -29,6 +29,10 @@ namespace SnakeAndLadderPbr
                     case LADDER:
                         Position += Die;
                         Console.WriteLine("The player climbed the ladder");
+                        if (Position > 100)
+                        {
+                            Position -= Die;
+                        }
                         break;
                     case SNAKE:
                         Position -= Die;
@@ -44,8 +48,8 @@ namespace SnakeAndLadderPbr
                         Console.WriteLine($"No play");
                         break;
                 }
+                Console.WriteLine($"The player position is {Position} \n");
             }
-            Console.WriteLine($"The player position is {Position} \n");
         }
     }
 }
