@@ -1,4 +1,6 @@
 ﻿using SnakeAndLadderPbr;
 
-SnakeLadder game = new SnakeLadder();
-game.Game();
+Players game = new Players();
+game.Ladder();
+
+//this program may take 3-5 minutes to show the result
