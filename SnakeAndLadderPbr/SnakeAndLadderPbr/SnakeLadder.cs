@@ -17,7 +17,7 @@ namespace SnakeAndLadderPbr
         {
             int Position = 0;
             Console.WriteLine($"Initial Position Of the Player Is \"{Position}\"\n");
-            for (; Position <= 100;)
+            for (; Position < 100;)
             {
                 Random random = new Random();
                 int Die = random.Next(1, 7);
