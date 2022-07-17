@@ -16,9 +16,11 @@ namespace SnakeAndLadderPbr
         public void Game()
         {
             int Position = 0;
+            int Count = 0;
             Console.WriteLine($"Initial Position Of the Player Is \"{Position}\"\n");
             for (; Position < 100;)
             {
+                Count++;
                 Random random = new Random();
                 int Die = random.Next(1, 7);
                 Console.WriteLine($"The number got by dice roll is {Die}");
@@ -50,6 +52,7 @@ namespace SnakeAndLadderPbr
                 }
                 Console.WriteLine($"The player position is {Position} \n");
             }
+            Console.WriteLine($"The dice has been rolled {Count} times to reach 100 position");
         }
     }
 }
